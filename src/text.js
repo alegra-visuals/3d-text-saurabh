@@ -15,7 +15,7 @@ const gui = new dat.GUI({
 });
 const debugObject = {}
 // gui.close();
-// gui.hide();
+gui.hide();
 // const cubeFolder = gui.addFolder("Cube Debug")
 
 window.addEventListener("keydown",(event)=>{
@@ -160,7 +160,7 @@ scene.add(group);
 
 // create camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height,0.1,1000);
-camera.position.z = 5;
+camera.position.z = 11;
 
 scene.add(camera);
 
@@ -172,7 +172,7 @@ controls.maxPolarAngle = Math.PI ;
 controls.minAzimuthAngle = -Math.PI /2 ;
 controls.maxAzimuthAngle = Math.PI/2 ;
 controls.minDistance = 3;
-controls.maxDistance = 8;
+controls.maxDistance = 10;
 // controls.target.y = 1;
 
 
