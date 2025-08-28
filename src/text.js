@@ -75,10 +75,26 @@ fontLoader.load("/font/font1.typeface.json",(font)=>{
     textGeometry.center();
     const textMaterial = new THREE.MeshMatcapMaterial();
     textMaterial.matcap = matcapTexture;
+
     text = new THREE.Mesh(textGeometry, textMaterial);
+    text.position.y = 0.5;
     scene.add(text);
 
-
+    const textGeometry2 = new TextGeometry("KAJAL KUMARI",{
+      font,
+      size: 0.5,
+      depth:0.2,
+      curveSegments: 12,
+      bevelEnabled: true,
+      bevelThickness: 0.003,
+      bevelSize: 0.005,
+      bevelOffset: 0,
+      bevelSegments: 5
+    }) 
+    textGeometry2.center();
+    const text2 = new THREE.Mesh(textGeometry2, textMaterial);
+    text2.position.y = -0.5;
+    scene.add(text2);
     // add donuld
 
 
